@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>เวิร์กชอป: การจัดรูปแบบข้อความ (Formatting Workshop)</title>
+    <meta name="description" content="เวิร์กชอปการใช้งานแท็กจัดรูปแบบข้อความใน HTML — ฝึกใช้ b, strong, i, u, mark และอื่นๆ เพื่อเพิ่มความชัดเจนของเนื้อหา">
+    <meta property="og:title" content="เวิร์กชอป: การจัดรูปแบบข้อความ" />
+    <meta property="og:description" content="ตัวอย่างและแบบฝึกหัดการใช้แท็กจัดรูปแบบข้อความใน HTML พร้อมคำแนะนำด้านการเข้าถึงและการออกแบบให้ตอบสนอง" />
+    <meta property="og:url" content="https://pramot674259011.github.io/w4_2/" />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <style>  
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background-color: rgb(255, 255, 255);
+        }
+        .container {
+            max-width: 900px;
+            width: 90%;
+            margin: 0 auto;
+            padding: 16px;
+            box-sizing: border-box;
+        }
+        .card {
+            background-color: #f8fbff;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            border-top: 4px solid darkblue;
+        }
+        .card.module-1 { border-top-color: blue; }
+        .card.module-2 { border-top-color: aqua; }
+        
+        h1 {
+            color: darkblue;
+            text-align: center;
+        }
+        h3 {
+            color: darkblue;
+        }
+        a {
+            text-decoration: none;
+            color: darkblue;
+            background-color: rgb(210, 206, 206);
+            padding: 2px 8px;
+            border-radius: 4px;
+        }
+        a:hover {
+            color: rgb(149, 34, 244);
+        }
+        footer {
+            margin-bottom: 20px;
+        }
+        /* คลาสสำหรับสีแดงชมพูตามโจทย์ */
+        /* ให้เฉพาะข้อความที่ต้องการเน้นมีสีแดง-ชมพู: ใช้คลาส .text-color */
+        .text-color {
+            color: deeppink;
+        }
+        /* ถ้าต้องการ ให้แท็ก formatting ภายในบล็อกที่มี .text-color ถูกเน้นด้วย */
+        .text-color b, .text-color i, .text-color u, .text-color mark, .text-color strong {
+            color: deeppink;
+        }
+        .note {
+            color: rgb(130, 130, 130);
+            font-size: 14px;
+        }
+        .note::before {
+            content: "❤️";
+        }
+        pre {
+            border-left: 4px solid darkblue;
+            background-color: rgb(210, 206, 206);
+            white-space: pre-wrap;
+        }
+        /* responsive tweaks */
+        @media (max-width: 600px) {
+            h1 { font-size: 1.4rem; }
+            .card { padding: 14px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <h1>Workshop: HTML Text Formatting</h1>
+        <p>ฝึกใช้แท็กรูปแบบข้อความ (Formatting Tags) เพื่อสร้างเนื้อหาที่อ่านง่ายและเป็นระเบียบ</p>
+
+        <section class="card">
+            <h2>1. สิ่งที่ต้องรู้ก่อนเริ่มทำ Workshop</h2>
+            <p>HTML มีแท็กสำหรับจัดรูปแบบข้อความ ทำให้เนื้อหาดูเด่น อ่านง่าย และสื่อความหมายได้ดีขึ้น</p>
+            <ul>
+                <li>&lt;b&gt; – <b class="text-color">ตัวหนา (เน้นเฉย ๆ)</b></li>
+                <li>&lt;strong&gt; – <strong class="text-color">ตัวหนาแบบ “สำคัญ”</strong></li>
+                <li>&lt;i&gt; – <i class="text-color">ตัวเอียง</i></li>
+                <li>&lt;u&gt; – <u class="text-color">ขีดเส้นใต้</u></li>
+                <li>&lt;mark&gt; – <mark class="text-color">ไฮไลต์ข้อความ</mark></li>
+            </ul>
+            <div class="note">
+                นักศึกษาต้องใช้แท็ก formatting อย่างน้อย 5 ชนิดในงานนี้
+            </div>
+        </section>
+       
+        <section class="card module-1">
+            <h2>2. ภารกิจของสำหรับนักศึกษาต้องทำ</h2>
+            <p>ให้ค้นหาเนื้อหาเกี่ยวกับ <b>“เทคโนโลยีคอมพิวเตอร์สมัยใหม่”</b> โดยต้องมี:</p>
+            <ul>
+                <li>หัวข้อ &lt;h1&gt; 1 อัน</li>
+                <li>ย่อหน้า &lt;p&gt; อย่างน้อย 3 ย่อหน้า</li>
+                <li>ใช้แท็ก formatting อย่างน้อย <b>5 ประเภท</b></li>
+                <li>ข้อความไหนมีการจัด formatting ให้ <b>ใส่สีข้อความเป็นสีแดงชมพู</b></li>
+            </ul>
+        </section>
+
+        <section class="card module-2">
+            <h2>บล็อกนี้สำหรับนักศึกษาหาเนื้อหามาใส่เอง</h2>
+            
+            <h1 style="text-align: left;">นวัตกรรมเทคโนโลยีคอมพิวเตอร์แห่งอนาคต</h1>
+
+            <p>
+                โลกปัจจุบันกำลังถูกขับเคลื่อนด้วย <b>ระบบปัญญาประดิษฐ์ (AI)</b> ซึ่งมีความสามารถในการคิดวิเคราะห์แทนมนุษย์ 
+                เทคโนโลยีนี้ได้ถูกนำมาใช้ในหลายอุตสาหกรรมเพื่อเพิ่มประสิทธิภาพการทำงาน
+            </p>
+
+            <p>
+                การเข้ามาของ <i>Cloud Computing</i> ช่วยให้การเก็บข้อมูลจำนวนมหาศาลทำได้ง่ายขึ้น 
+                ผู้ใช้งานสามารถ <u>เข้าถึงข้อมูลได้จากทุกที่ทุกเวลา</u> เพียงแค่มีการเชื่อมต่ออินเทอร์เน็ต
+            </p>
+
+            <p>
+                นอกจากนี้ <mark>เทคโนโลยีควอนตัม (Quantum Computing)</mark> ยังเป็นก้าวสำคัญที่จะทำให้คอมพิวเตอร์ 
+                <strong>ประมวลผลได้เร็วขึ้นล้านเท่า</strong> ซึ่งจะส่งผลกระทบต่อความปลอดภัยทางไซเบอร์และการแพทย์ในอนาคต
+            </p>
+
+        </section>
+
+    <footer><a href="https://pramot674259011.github.io/w4_2/">← กลับไปยังหน้า GitHub Pages</a></footer>
+
+    </div>
+</body>
+</html>
